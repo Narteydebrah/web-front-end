@@ -1,10 +1,10 @@
 <?php
 //require __DIR__ 'database_credentials.php';
-require __DIR__ . '/database_credentials.php';
+//require __DIR__ . '/database_credentials.php';
 
 // Create connection
 
-$conn = new mysqli("localhost", "root", "", "chefsbank");
+$conn = new mysqli("localhost", "root", "", "chefsbank(1)");
 
 
 // Check connection

@@ -3,6 +3,6 @@
 define("servername","localhost");
 define("username","root");
 define("password","");
-define("dbname","chefsbank");
+define("dbname","chefsbank(1)");
 ?>
 

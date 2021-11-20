@@ -1,8 +1,9 @@
 <?php
 //connect to database class
-include_once (dirname(__FILE__)).'/./controllers/post_controller.php';
+include_once (dirname(__FILE__)).'\post_controller.php';
 
-$posts = getPosts();
+// $posts = getPosts();
+
 ?>
 
 
@@ -276,17 +277,18 @@ a{
 <div>
   <h3 class="mt-5">Your Posts</h3>
   <ul class="list-group">
-    <?php
-    foreach($posts as $key => $value){
-?>
-              <li class="list-group-item"> <?= $value['title'] ?>  
-                  <a href="./functions/post_delete.php?id=<?= $value['id'] ?>" class="btn btn-danger btn-custom"> Delete</a> 
-                  <a href="./view/post_update.php?id=<?= $value['id'] ?>" class="btn btn-secondary btn-custom"> Update</a> 
-                  <a href="./view/post.php?id=<?= $value['id'] ?>" class="btn btn-primary btn-custom">View</a>
+      <?php
+      $posts = getPosts();
+        foreach($posts as $key => $value){
+          ?>
+              <li class="list-group-item"> <?= $value['NameOfFood'] ?>  
+                  <a href="./functions/post_delete.php?id=<?= $value['TypeID'] ?>" class="btn btn-danger btn-custom"> Delete</a> 
+                  <a href="./view/post_update.php?id=<?= $value['TypeID'] ?>" class="btn btn-secondary btn-custom"> Update</a> 
+                  <a href="./view/post.php?id=<?= $value['TypeID'] ?>" class="btn btn-primary btn-custom">View</a>
               </li>
-              <?php
+            <?php
             }
-        ?>    
+          ?>    
   </ul>
   
 </div>

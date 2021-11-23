@@ -8,30 +8,26 @@ Fname varchar(100),
 Lname varchar(100),
 Gender enum("Male", "Female"),
 Email varchar(100),
-RecipeTitle varchar(100),
-RecipeDetails varchar(300),
+-- RecipeTitle varchar(100),--
+-- RecipeDetails varchar(300),--
 PRIMARY KEY(chefID)
 );
--- insert into Chefs values (220,'Mateen','Andan','Male','mateenandan@gmail.com','');
--- insert into Chefs values (221,'Steven','Attipoe','Male','stevenattipooe@gmail.com','');
--- insert into Chefs values (222,'George','Debrah','Male','georged@gmail.com','');
--- insert into Chefs values (223,'Emmanuella','Apreku','Female','sweetie@gmail.com','');
--- insert into Chefs values (224,'Nii','Armah','Male','narmah@gmail.com','');
+insert into Chefs values (220,'Mateen','Andan','Male','mateenandan@gmail.com');
+insert into Chefs values (221,'Steven','Attipoe','Male','stevenattipooe@gmail.com);
+insert into Chefs values (222,'George','Debrah','Male','georged@gmail.com);
+insert into Chefs values (223,'Emmanuella','Apreku','Female','sweetie@gmail.com);
+insert into Chefs values (224,'Nii','Armah','Male','narmah@gmail.com');
 
-create table FoodType(
-TypeID int UNIQUE NOT NULL auto_increment,
-TypeOfFood varchar(100),
-PRIMARY KEY(TypeID)
-);
-insert into FoodType(TypeOfFood) values ('asian');
 
 create table Foods(
+chefID int,
 TypeID int,
 NameOfFood varchar(100),
 NameOfRecipe varchar(100),
 Ingredients varchar(300),
 Steps varchar(300),
 FOREIGN KEY(TypeID) references FoodType(TypeID)
+FOREIGN KEY(chefID) references Chefs(chefID)
 );
 
 

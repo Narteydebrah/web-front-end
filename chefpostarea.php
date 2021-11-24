@@ -3,6 +3,12 @@
 include_once (dirname(__FILE__)).'\post_controller.php';
 
 // $posts = getPosts();
+if(isset($_POST['createBtn'])){
+  session_start();
+  $_SESSION['title'] = $_POST['title'];
+  $_SESSION['recepe'] = $_POST['recepe'];
+}
+
 
 ?>
 
@@ -259,16 +265,17 @@ a{
 <br>
 <br>
 <div class="formtextarea">
-<form method="POST" action="./functions/post_create.php">
+<form method="POST" action="post_create.php">
         <!-- titlebar -->
        <label for="name" class="form-label">Post Title</label>
       <input type="text" name="title" class="form-control" id="name" required ><br>
       <br> 
     <label for="recep">Type your recipes here</label><br>
-     <textarea name="recepe "  rows="6" cols="40"> Write something here...</textarea>
+     <textarea name="recepe"  rows="6" cols="40"> Write something here...</textarea>
     <br>
-    <button type="button" class="btn btn-primary">Create</button>
+    <input type="submit" name="createBtn" class="btn btn-primary" value="Create" />
   </form>
+
 </div>
 <br>
 <br>
@@ -282,9 +289,9 @@ a{
         foreach($posts as $key => $value){
           ?>
               <li class="list-group-item"> <?= $value['NameOfFood'] ?>  
-                  <a href="./functions/post_delete.php?id=<?= $value['TypeID'] ?>" class="btn btn-danger btn-custom"> Delete</a> 
-                  <a href="./view/post_update.php?id=<?= $value['TypeID'] ?>" class="btn btn-secondary btn-custom"> Update</a> 
-                  <a href="./view/post.php?id=<?= $value['TypeID'] ?>" class="btn btn-primary btn-custom">View</a>
+                  <a href="post_delete.php?id=<?= $value['TypeID'] ?>" class="btn btn-danger btn-custom"> Delete</a> 
+                  <a href="post_update.php?id=<?= $value['TypeID'] ?>" class="btn btn-secondary btn-custom"> Update</a> 
+                  <a href="post.php?id=<?= $value['TypeID'] ?>" class="btn btn-primary btn-custom">View</a>
               </li>
             <?php
             }

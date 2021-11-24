@@ -10,6 +10,8 @@ if(isset($_POST['submit'])){
     // create post if not empty
     $newPost = createPost($title, $body);
     if($newPost){
-        header("location: ../chefpostarea.php");
+        header("location: chefpostarea.php");
+    }else{
+        echo "Failed to create";
     }
 }

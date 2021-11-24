@@ -7,7 +7,7 @@ class Post extends db_connection {
 		
     public function create($title, $body){
         // sql query
-        $sql = "INSERT INTO `posts`(`title`, `body`) VALUES ('$title','$body')";
+        $sql = "INSERT INTO `Foods`(`NameOfFood`, `Steps`) VALUES ('$title','$body')";
 
         // run query
         return $this->db_query($sql);
@@ -32,7 +32,7 @@ class Post extends db_connection {
 
     public function getSinglePost($id){
         // sql query
-        $sql = "SELECT * FROM `posts` WHERE `id`='$id'";
+        $sql = "SELECT * FROM `Foods` WHERE `TypeID`='$id'";
 
         // run query
         return $this->db_query($sql);
@@ -40,7 +40,7 @@ class Post extends db_connection {
 
     public function update($id, $title, $body){
         // sql query
-        $sql = "UPDATE `posts` SET `title`='$title',`body`='$body' WHERE `id`='$id'";
+        $sql = "UPDATE `Foods` SET `NameOfFood`='$title',`steps`='$body' WHERE `TypeID`='$id'";
 
         // run query
         return $this->db_query($sql);
@@ -48,7 +48,7 @@ class Post extends db_connection {
 
     public function delete($id){
         // sql query
-        $sql = "DELETE FROM `posts` WHERE `id`='$id'";
+        $sql = "DELETE FROM `Foods` WHERE `TypeID`='$id'";
 
         // run query
         return $this->db_query($sql);

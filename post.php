@@ -24,16 +24,21 @@ if(isset($_GET['id'])){
     <title>Blog Post</title>
   </head>
   <body>
-    <div class="container container-custom">
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <form method="POST" action="post_update.php?id=<?= $post['TypeID'] ?>" >
         <h1><?= $post['NameOfFood']; ?></h1>
-        <p style="mt-5"><?= $post['Steps']; ?></p>
+        <textarea name="steps" rows="6" cols="40"><?= $post['Steps']; ?> </textarea>
+        <br>
+        <input name="submit" type="submit">
+    </form>
+    <div class="container container-custom">
+        
         <a class="btn btn-primary" href="chefpostarea.php">Back to Home</a>
         <a href="post_delete.php?id=<?= $post['TypeID'] ?>" class="btn btn-danger btn-custom"> Delete</a> 
         <a href="post_update.php?id=<?= $post['TypeID'] ?>" class="btn btn-secondary btn-custom"> Update</a> 
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    
   </body>
 </html>

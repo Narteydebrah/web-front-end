@@ -265,15 +265,17 @@ a{
 <br>
 <br>
 <div class="formtextarea">
-<form method="POST" action="post_create.php">
+
+<form method="POST" action="post_create.php?>">
+
         <!-- titlebar -->
        <label for="name" class="form-label">Post Title</label>
-      <input type="text" name="title" class="form-control" id="name" required ><br>
+      <input type="text" name="NameOfFood" class="form-control" id="name" required ><br>
       <br> 
     <label for="recep">Type your recipes here</label><br>
-     <textarea name="recepe"  rows="6" cols="40"> Write something here...</textarea>
+     <textarea name="steps"  rows="6" cols="40"> Write something here...</textarea>
     <br>
-    <input type="submit" name="createBtn" class="btn btn-primary" value="Create" />
+    <input type="submit" name="submit" class="btn btn-primary" value="Create" />
   </form>
 
 </div>

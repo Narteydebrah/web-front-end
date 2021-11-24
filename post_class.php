@@ -40,7 +40,7 @@ class Post extends db_connection {
 
     public function update($id, $title, $body){
         // sql query
-        $sql = "UPDATE `Foods` SET `NameOfFood`='$title',`steps`='$body' WHERE `TypeID`='$id'";
+        $sql = "UPDATE `Foods` SET `NameOfFood`='$title',`Steps`='$body' WHERE `TypeID`='$id'";
 
         // run query
         return $this->db_query($sql);

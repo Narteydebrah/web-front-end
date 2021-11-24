@@ -4,7 +4,7 @@ include_once (dirname(__FILE__)).'/post_controller.php';
 if(isset($_GET['id'])){
     $deletePost = deletePost($_GET['id']);
     if($deletePost){
-        header("location: ../chefpostarea.php");
+        header("location: chefpostarea.php");
     }else{
         echo "something went wrong";
     }
@@ -12,7 +12,7 @@ if(isset($_GET['id'])){
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,4 +23,4 @@ if(isset($_GET['id'])){
 <body>
     <p> Successfully deleted recipe </p>
 </body>
-</html>
+</html> -->

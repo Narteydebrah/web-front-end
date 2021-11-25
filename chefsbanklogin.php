@@ -17,7 +17,7 @@
     $result=mysqli_query($conn,$sql);
     
     if(mysqli_num_rows($result)==1){
-        header("location: chefsbankindex.html");
+        header("location: chefsbankcontrol.html");
         
         exit();
     }
@@ -27,10 +27,7 @@
     }
         
 }
-?>
-
-
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -357,14 +354,13 @@ ol, ul {
 
     <div class="main center">
         <div class="box center">
-            <form method='POST' action="#"> 
+		<form method='POST' action="#"> 
             <h1 class="heading">WELCOME BACK!</h1>
             <input type="email" name="user" id="" class="input" placeholder="Enter Email">
             <input type="password" name="passw" class="input" placeholder="Enter Password">
             <input type="submit" name="submitBtn" class="btn create_account btn-lg btn-primary" value="Log In">
-            <!-- <button class="btn">LOG IN</button> -->
         </form>
-        </div>
+		</div>
     </div>
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />

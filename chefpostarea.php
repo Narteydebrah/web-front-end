@@ -247,10 +247,10 @@ a{
                                         <a class="nav-link" href="CHEFSBANK_RECIPES_PAGE.html">Recipes</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="chefsbanksignup.html">Sign Up</a>
+                                        <a class="nav-link" href="chefsbanksignup.php">Sign Up</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="chefsbanklogin.html">Log in</a>
+                                        <a class="nav-link" href="chefsbanklogin.php">Log in</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">About</a>
@@ -292,7 +292,7 @@ a{
           ?>
               <li class="list-group-item"> <?= $value['NameOfFood'] ?>  
                   <a href="post_delete.php?id=<?= $value['TypeID'] ?>" class="btn btn-danger btn-custom"> Delete</a> 
-                  <a href="post_update.php?id=<?= $value['TypeID'] ?>" class="btn btn-secondary btn-custom"> Update</a> 
+                  <!-- <a href="post_update.php?id=<?= $value['TypeID'] ?>" class="btn btn-secondary btn-custom"> Update</a>  -->
                   <a href="post.php?id=<?= $value['TypeID'] ?>" class="btn btn-primary btn-custom">View</a>
               </li>
             <?php

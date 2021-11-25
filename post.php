@@ -32,13 +32,14 @@ if(isset($_GET['id'])){
         <h1><?= $post['NameOfFood']; ?></h1>
         <textarea name="steps" rows="6" cols="40"><?= $post['Steps']; ?> </textarea>
         <br>
-        <input name="submit" type="submit">
+        <input name="submit" type="submit" value="update">
     </form>
     <div class="container container-custom">
         
         <a class="btn btn-primary" href="chefpostarea.php">Back to Home</a>
         <a href="post_delete.php?id=<?= $post['TypeID'] ?>" class="btn btn-danger btn-custom"> Delete</a> 
-        <a href="post_update.php?id=<?= $post['TypeID'] ?>" class="btn btn-secondary btn-custom"> Update</a> 
+        <!-- <a href="post_update.php?id=<?= $post['TypeID'] ?>" class="btn btn-secondary btn-custom"> Update</a>  -->
     </div>
   </body>
 </html>
+
